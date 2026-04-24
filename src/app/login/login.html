@@ -1,0 +1,152 @@
+
+<div class="body">
+  <div class="paglogin">
+    <a routerLink="/"> <img ngSrc="assets/imagens/logo1.png" width="500" height="500"> </a>
+      
+    <section class="corpo">
+    <div class="selecao">
+        <input
+        type="radio"
+        id="login"
+        class="div1"
+        class="rd"
+        name="consulta"
+        value="1"
+        [checked]="modo === 'login'"
+        (change)="mostrarLogin()"
+      />
+      <label for="login" class="slogin1">Login</label>
+
+      <input
+        type="radio"
+        id="cadastro"
+        class="div2"
+        class="rd"
+        name="consulta"
+        value="2"
+        [checked]="modo === 'cadastro'"
+        (change)="mostrarCadastro()"
+      />
+      <label for="cadastro" class="slogin2">Cadastro</label>
+    </div>
+
+    <div class="flip-containerlc">
+      <div class="flipperlc">
+
+        <!-- LOGIN -->
+        <div id="ediv1" class="onOff" class="frontlc" *ngIf="modo === 'login'">
+          <div  id="box1" class="boxlc box-frontlc">
+            <form
+                action="."
+                method="post"
+                name="dados"
+                onsubmit="return false;">
+              <legend id="titulologin">Login</legend>
+
+              <label for="email" class="email">
+                E-mail:
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="name@email.com"
+                  required
+                />
+              </label>
+
+              <label for="senha" class="senha">
+                Senha:
+                <input 
+                id="senha"
+                type="password"
+                name="senha" required />
+              </label>
+
+              <div class="pbotao">
+                <input
+                  type="submit"
+                  value="Entrar"
+                  class="botaolc"
+                  name="acao"
+                />
+              </div>
+
+              <p class="esqueci">
+                Esqueceu a senha? <a routerLink="/">Clique aqui!</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- CADASTRO -->
+        <div id="ediv2" class="onOff" style="display: none" class="backlc" *ngIf="modo === 'cadastro'">
+          <div class="boxlc box-backlc">
+            <form
+                action="."
+                method="post"
+                name="dados"
+                onsubmit="return false;">
+              <legend id="titulologin">Cadastro</legend>
+
+              <label for="nome" class="nome">
+                Nome:
+                <input type="text" 
+                name="nome"
+                id="nome"
+                size="52"
+                maxlength="150"
+                required />
+              </label>
+
+              <label class="email">
+                E-mail:
+                <input
+                  type="email"
+                    name="email"
+                    id="email"
+                    placeholder="name@email.com"
+                  required
+                />
+              </label>
+
+              <label for="senha" class="senha">
+                Senha:
+                <input type="password" name="senha" id="senha" required />
+              </label>
+
+              <div class="pbotao">
+                <input
+                  type="submit"
+                  value="Cadastrar"
+                  class="botaolc"
+                  name="acao"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="return">
+      Retornar para a
+      <a routerLink="/">Página Principal</a>
+    </p>
+ </section> 
+  <footer class="rodapelc">
+    <p>
+      &copy; Ruth Santana |
+     <a href="https://www.linkedin.com/in/ruthsantana" target="_blank"
+          >LinkedIn</a
+        >
+    </p>
+
+    <p class="cred">
+      Crédito da imagem de logo:
+      <a
+          href="https://br.freepik.com/vetores-gratis/logotipo-detalhado-da-viagem_9544552.htm#query=viagem%20logo&position=5&from_view=search&track=ais"
+          >Freepik</a
+        >
+    </p>
+  </footer>
+</div>
+
