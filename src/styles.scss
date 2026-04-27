@@ -1,8 +1,43 @@
-@charset "utf-8";
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      
+    )
+  );
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+}
 
 @media screen and (min-width: 414px) and (max-width: 768px) {
 
- table {
+  table {
     visibility: hidden;
   }
 
@@ -91,7 +126,6 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
   section.corpo {
     display: flex;
     flex-direction: row;
@@ -124,8 +158,8 @@
   }
 
   .formviagem {
-    display: block;  
-    width: 700px; 
+    display: block;
+    width: 700px;
     height: 70px;
     margin-top: 20px;
   }
@@ -148,31 +182,30 @@
     margin-top: 50px;
     height: 150px;
   }
-  
-  #textemail{
+
+  #textemail {
     margin-top: 35px;
   }
 
-  #recebaofertas{
+  #recebaofertas {
     margin-left: 25px;
     margin-top: 20px;
     font-size: 1em;
   }
 
   .formemail {
-    padding: 20px;   
-    width: 700px; 
+    padding: 20px;
+    width: 700px;
   }
 
-  #emailimgcontato{
+  #emailimgcontato {
     width: 80px;
     height: 80px;
   }
-  
+
   .botaoformemail {
     margin-top: 20px;
   }
-
 
   .imgbox,
   .imgbox2,
@@ -206,7 +239,6 @@
     width: 100%;
   }
 
-  
   .flip-container {
     margin-top: 42%;
     margin-right: 0%;
@@ -231,12 +263,13 @@
 
   .flipper12 {
     margin-right: 5%;
-  } 
-  .flipper8,.flipper4 {
+  }
+  .flipper8,
+  .flipper4 {
     margin-right: 5%;
   }
 
-  .flipper9{
+  .flipper9 {
     margin-left: 5%;
   }
 
@@ -244,7 +277,7 @@
     height: 580px;
     width: 100%;
   }
-  .box-front3{
+  .box-front3 {
     height: 350px;
     width: 100%;
   }
@@ -285,8 +318,6 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1290px) {
-
-
   body {
     height: 100vh;
   }
@@ -323,8 +354,8 @@
   }
 
   .formviagem {
-    display: block;  
-    width: 700px; 
+    display: block;
+    width: 700px;
     height: 70px;
     margin-top: 20px;
   }
@@ -348,27 +379,27 @@
     margin-top: 40px;
     height: 150px;
   }
-  
-  #textemail{
+
+  #textemail {
     margin-top: 35px;
   }
 
-  #recebaofertas{
+  #recebaofertas {
     margin-left: 25px;
     margin-top: 20px;
     font-size: 1em;
   }
 
   .formemail {
-    padding: 20px;   
-    width: 800px; 
+    padding: 20px;
+    width: 800px;
   }
 
-  #emailimgcontato{
+  #emailimgcontato {
     width: 80px;
     height: 80px;
   }
-  
+
   .botaoformemail {
     margin-top: 35px;
   }
@@ -404,7 +435,7 @@
     height: 100%;
     width: 100%;
   }
-  
+
   .flip-container {
     margin-top: 35%;
     margin-right: 0%;
@@ -429,12 +460,13 @@
 
   .flipper12 {
     margin-right: 5%;
-  } 
-  .flipper8,.flipper4 {
+  }
+  .flipper8,
+  .flipper4 {
     margin-right: 5%;
   }
 
-  .flipper9{
+  .flipper9 {
     margin-left: 5%;
   }
 
@@ -442,7 +474,7 @@
     height: 580px;
     width: 100%;
   }
-  .box-front3{
+  .box-front3 {
     height: 280px;
     width: 100%;
   }
@@ -463,7 +495,7 @@
   }
 
   .box-front .obs {
-    font-family: "Beach";
+    font-family: 'Beach';
     text-align: center;
     font-size: 1em;
   }
@@ -474,20 +506,20 @@
     font-size: 0.8em;
   }
 
-  .slider{
+  .slider {
     height: 45%;
   }
 
-  .slider2{
+  .slider2 {
     height: 10%;
   }
 
-  li.slide{
+  li.slide {
     height: 300px;
     width: 350px;
   }
 
-  li.slide2{
+  li.slide2 {
     height: 50px;
     width: 350px;
   }
@@ -496,7 +528,6 @@
     height: 450px;
     margin-top: 60px;
   }
-
 
   .rodape {
     margin-top: 10px;
@@ -508,7 +539,6 @@
 }
 
 @media screen and (min-width: 1290px) {
-  
   body {
     height: 100vh;
   }
@@ -557,8 +587,8 @@
   }
 
   .formviagem {
-    display: block;  
-    width: 700px; 
+    display: block;
+    width: 700px;
     height: 70px;
     margin-top: 20px;
   }
@@ -582,27 +612,27 @@
     margin-top: 40px;
     height: 150px;
   }
-  
-  #textemail{
+
+  #textemail {
     margin-top: 35px;
   }
 
-  #recebaofertas{
+  #recebaofertas {
     margin-left: 25px;
     margin-top: 20px;
     font-size: 1em;
   }
 
   .formemail {
-    padding: 20px;   
-    width: 800px; 
+    padding: 20px;
+    width: 800px;
   }
 
-  #emailimgcontato{
+  #emailimgcontato {
     width: 80px;
     height: 80px;
   }
-  
+
   .botaoformemail {
     margin-top: 35px;
   }
@@ -647,12 +677,13 @@
 
   .flipper12 {
     margin-right: 5%;
-  } 
-  .flipper8,.flipper4 {
+  }
+  .flipper8,
+  .flipper4 {
     margin-right: 5%;
   }
 
-  .flipper9{
+  .flipper9 {
     margin-left: 5%;
   }
 
@@ -660,7 +691,7 @@
     height: 580px;
     width: 100%;
   }
-  .box-front3{
+  .box-front3 {
     height: 280px;
     width: 100%;
   }
@@ -682,7 +713,7 @@
   }
 
   .box-front .obs {
-    font-family: "Beach";
+    font-family: 'Beach';
     text-align: center;
     font-size: 1.2em;
   }
@@ -693,20 +724,20 @@
     font-size: 1em;
   }
 
-  .slider{
+  .slider {
     height: 50%;
   }
 
-  .slider2{
+  .slider2 {
     height: 10%;
   }
 
-  li.slide{
+  li.slide {
     height: 350px;
     width: 350px;
   }
 
-  li.slide2{
+  li.slide2 {
     height: 50px;
     width: 350px;
   }
@@ -723,4 +754,3 @@
     margin-top: 550px;
   }
 }
-

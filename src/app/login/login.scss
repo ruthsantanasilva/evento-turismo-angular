@@ -29,6 +29,8 @@
 .body {
   background: url("/assets/imagens/Designer.png") center center no-repeat fixed;
   background-size: cover;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: 100%;
 }
 .prod {
   margin-top: 10px;
@@ -45,8 +47,8 @@
   height: 8%;
 }
 
-.div1,
-.div2 {
+#login,
+#cadastro {
   cursor: pointer;
   margin-left: 10px;
   margin-right: 9px;
@@ -125,44 +127,52 @@ input[type="radio"]:checked::before {
   width: 100%;
   height: 100%;
 }
+
 .boxlc {
   height: 500px;
   width: 358px;
   cursor: pointer;
   border-radius: 20px;
 }
-form {
-  height: 450px;
-  width: 370px;
+
+.boxlc2 {
+  height: 600px;
+  width: 358px;
+  cursor: pointer;
+  border-radius: 20px;
 }
+
+form {
+  width: 100%;
+  max-width: 380px;
+}
+.input-padrao {
+  width: 250px;
+  margin-left: 2px;
+  border-color: rgba(0, 0, 0, 0.199);
+  padding: 10px;
+}
+
 .box-frontlc,
 .box-backlc {
   background-color: rgba(245, 245, 245, 0.767);
 }
-#titulologin {
+.titulologin {
   font-family: "Beach";
   font-size: 4em;
-  padding: 20px;
+  padding: 40px;
   color: #fa7b04;
   text-align: center;
 }
 label.email,
-.senha,
-.nome {
+label.senha,
+label.nome {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   display: block;
   padding: 16px;
 }
-#email,
-#senha,
-#nome {
-  width: 220px;
-  margin-left: 5px;
-  border-color: rgba(0, 0, 0, 0.199);
-  padding: 12px;
-  border-radius: 6px;
-}
+
 .box-frontlc p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
@@ -199,12 +209,6 @@ label.email,
   color: #fff;
   transition: all 0.4s ease-in;
 }
-.return {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-top: 70px;
-  font-size: 1.2em;
-  color: rgb(255, 255, 255);
-}
 .return a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -224,4 +228,40 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+mat-form-field {
+  width: 90%;
+  height: 80px;
+}
+
+mat-form-field input {
+  font-family: inherit;
+  font-size: 0.8em;
+
+}
+
+mat-label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2em;
+  padding: 0;          /* 🔑 importante */
+  display: inline-flex;
+
+}
+
+mat-form-field .mat-mdc-form-field-icon-suffix {
+  align-self: center;
+
+}
+
+
+/* Remove ícone nativo de mostrar senha (Chrome / Edge / Opera) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Chrome, Edge, Safari (webkit) */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
 }
