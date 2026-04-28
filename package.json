@@ -2,7 +2,7 @@
   "name": "evento-turismo-angular",
   "version": "0.0.0",
   "scripts": {
-    "deploy": "ng build --configuration production --base-href='/evento-turismo-angular/' && npx angular-cli-ghpages --dir=dist/evento-turismo-angular",
+    "deploy": "ng build --configuration production --base-href='/evento-turismo-angular/' && npx angular-cli-ghpages --dir=dist/evento-turismo-angular --no-cache",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
