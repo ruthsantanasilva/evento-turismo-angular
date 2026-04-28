@@ -1,7 +1,9 @@
 /*---------MEDIAS QUERIES-------*/
 
 @media screen and (min-width: 414px) and (max-width: 768px) {
-
+ body{
+  height: 100vh;
+ }
  table {
     visibility: hidden;
   }
@@ -91,7 +93,9 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
+  body{
+  height: 100vh;
+ }
   section.corpo {
     display: flex;
     flex-direction: row;
@@ -285,12 +289,9 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1290px) {
-
-
-  body {
-    height: 100vh;
-  }
-
+  body{
+  height: 100vh;
+ }
   section.corpo {
     display: flex;
     flex-direction: row;

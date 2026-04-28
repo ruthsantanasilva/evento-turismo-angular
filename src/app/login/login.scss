@@ -30,11 +30,10 @@
   background: var(--img-designer) center center no-repeat fixed;
   background-size: cover;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  height: 100%;
+  height: 100vh;
 }
 .prod {
   margin-top: 10px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   font-size: 1em;
 }
@@ -167,14 +166,12 @@ form {
 label.email,
 label.senha,
 label.nome {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1em;
   display: block;
   padding: 16px;
 }
 
 .box-frontlc p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   padding: 10px;
   font-size: 0.9em;
@@ -193,7 +190,7 @@ label.nome {
 }
 .botaolc {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   background: #fa7b04;
   background: linear-gradient(90deg, #fa7b04, 0%, #fa7b04 100%);
   font-weight: bold;
@@ -217,7 +214,6 @@ label.nome {
   text-decoration: underline;
 }
 .rodapelc {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   color: rgb(255, 255, 255);
   margin-top: 147px;
@@ -242,18 +238,15 @@ mat-form-field input {
 }
 
 mat-label {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.2em;
-  padding: 0;          /* 🔑 importante */
+  padding: 0;         
   display: inline-flex;
-
 }
 
 mat-form-field .mat-mdc-form-field-icon-suffix {
   align-self: center;
 
 }
-
 
 /* Remove ícone nativo de mostrar senha (Chrome / Edge / Opera) */
 input[type="password"]::-ms-reveal,
