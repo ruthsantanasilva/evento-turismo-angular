@@ -27,7 +27,7 @@
   }
 }
 .body {
-  background: url("/assets/imagens/Designer.png") center center no-repeat fixed;
+  background: var(--img-designer) center center no-repeat fixed;
   background-size: cover;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: 100%;
