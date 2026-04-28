@@ -144,7 +144,7 @@ nav ul li a:hover {
   transition: 0.6s;
 } /*FORMULÁRIO DE ORIGEM E DESTINO*/
 .containerform {
-  background: url("/assets/imagens/Designer.png") center center no-repeat fixed;
+  background: var(--img-designer) center center no-repeat fixed;
   background-size: cover;
   height: 800px;
   width: 100%;
@@ -304,7 +304,7 @@ h2 {
   background-color: #f8dfba4b;
 }
 .imgbox {
-  background: black url("/assets/imagens/local/bonito.jpg") center center no-repeat fixed;
+  background: black var(--img-bonito) center center no-repeat fixed;
   background-size: cover;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
@@ -351,7 +351,7 @@ h2 {
   margin-top: -15px;
 }
 .box-back {
-  background: black url("/assets/imagens/local/bonito.jpg") center center no-repeat fixed;
+  background: black var(--img-bonito) center center no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
@@ -396,12 +396,12 @@ h2 {
   transition: transform 0.8s;
 }
 .box-back2 {
-  background: black url("/assets/imagens/local/praia.jpg") center center no-repeat fixed;
+  background: black var(--img-praia) center center no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
 .imgbox2 {
-  background: black url("/assets/imagens/local/praia.jpg") center center no-repeat fixed;
+  background: black var(--img-praia) center center no-repeat fixed;
   background-size: cover;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
@@ -415,12 +415,12 @@ h2 {
   transition: transform 0.8s;
 }
 .box-back3 {
-  background: black url("/assets/imagens/local/california.png") center center no-repeat fixed;
+  background: black var(--img-california) center center no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
 .imgbox3 {
-  background: black url("/assets/imagens/local/california.png") center center no-repeat fixed;
+  background: black var(--img-california) center center no-repeat fixed;
   background-size: cover;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
@@ -434,12 +434,12 @@ h2 {
   transition: transform 0.8s;
 }
 .box-back4 {
-  background: black url("/assets/imagens/local/roma.jpg") center center no-repeat fixed;
+  background: black var(--img-roma) center center no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
 .imgbox4 {
-  background: black url("/assets/imagens/local/roma.jpg") center center no-repeat fixed;
+  background: black var(--img-roma) center center no-repeat fixed;
   background-size: cover;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
@@ -453,12 +453,12 @@ h2 {
   transition: transform 0.8s;
 }
 .box-back5 {
-  background: black url("/assets/imagens/local/saopaulo.jpg") center center no-repeat fixed;
+  background: black var(--img-saopaulo) center center no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
 .imgbox5 {
-  background: black url("/assets/imagens/local/saopaulo.jpg") center center no-repeat fixed;
+  background: black var(--img-saopaulo) center center no-repeat fixed;
   background-size: cover;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
@@ -472,12 +472,12 @@ h2 {
   transition: transform 0.8s;
 }
 .box-back6 {
-  background: black url("/assets/imagens/local/salvador.jpg") center center no-repeat fixed;
+  background: black var(--img-salvador) center center no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
 .imgbox6 {
-  background: black url("/assets/imagens/local/salvador.jpg") center center no-repeat fixed;
+  background: black var(--img-salvador) center center no-repeat fixed;
   background-size: cover;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
@@ -491,12 +491,12 @@ h2 {
   transition: transform 0.8s;
 }
 .box-back7 {
-  background: black url("/assets/imagens/local/japao.jpg") center center no-repeat fixed;
+  background: black var(--img-japao) center center no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
 .imgbox7 {
-  background: black url("/assets/imagens/local/japao.jpg") center center no-repeat fixed;
+  background: black var(--img-japao) center center no-repeat fixed;
   background-size: cover;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
@@ -510,13 +510,13 @@ h2 {
   transition: transform 0.8s;
 }
 .box-back8 {
-  background: black url("/assets/imagens/local/riodejaneiro.jpg") center center no-repeat
+  background: black var(--img-riodejaneiro) center center no-repeat
     fixed;
   background-size: cover;
   text-align: center;
 }
 .imgbox8 {
-  background: black url("/assets/imagens/local/riodejaneiro.jpg") center center no-repeat
+  background: black var(--img-riodejaneiro) center center no-repeat
     fixed;
   background-size: cover;
   height: 120px;
@@ -709,7 +709,7 @@ li.slide2 {
   transition: all 0.5s ease-in;
 } /*IMAGEM DE FUNDO ANTES DO RODAPÉ*/
 .fundo {
-  background: black url("/assets/imagens/local/grecia1.png") center center no-repeat fixed;
+  background-image: black var(--img-grecia1) center center no-repeat fixed;
   background-size: cover;
   height: 500px;
   margin-top: 90px;
