@@ -15,6 +15,7 @@ body {
   height: 100%;
   background: #fff;
 }
+
 .prod {
   margin-top: 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -41,7 +42,6 @@ section.corpo2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 section.corpo3 {
@@ -52,9 +52,10 @@ section.corpo3 {
   
 }
 #logo {
-  margin-left: 40px;
+  margin-left: 80px;
+  margin-top: 10px;
   width: 100px;
-  height: 35px; 
+  height: 50px; 
 }
 
 table {
@@ -67,7 +68,6 @@ table {
   margin-top: 50px;
 }
 table tr {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 10px;
   font-size: 14px;
   font-weight: bold;
@@ -96,17 +96,63 @@ table tr td {
   width: 180px;
   
 }
+
 #user {
   width: 20px;
   height: 20px;
 }
 
-#userentre {
-  width: 30px;
-  height: 30px;
-  margin-top: 5px;
-  margin-right: 10px;
+.icones{
+  width: 100%;
+}
+.iconesmenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.textosicones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.textosicones li p {
+  text-align: center;
+  color: #000;
+  margin-left: 12px;
+}
+.fa-plane-arrival, .fa-bed, .fa-landmark {
+  float: center;
+  margin-top: 15px;
+  border-radius: 0.313rem;
+  background-color: #fa7b04;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(85, 84, 84, 0.507);
+  color: #fff;
+  padding: 0.800rem;
+  font-size: 25px;
+  font-weight:900;
+  cursor: pointer;
+  border: none;
+}
+.fa-plane-arrival:hover, .fa-bed:hover, .fa-landmark:hover {
+  background-color: #881df2;
+  transition: all 0.1s ease-in-out 0s;
+}
+.fa-user {
+  margin-top: 15px;
   float: right;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 0.313rem;
+  padding: 0.313rem;
+  font-size: 30px;
+  font-weight:900;
+  cursor: pointer;
+  border: none;
 }
 #entre {
   width: 20px;

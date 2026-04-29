@@ -24,8 +24,6 @@ import {ChangeDetectionStrategy, signal} from '@angular/core';
   templateUrl: './login.html',
   styleUrls: ['./login.scss', 
     '../pagina-inicial/pagina-inicial.scss'],
-  
-  
 })
 
 export class Login {
