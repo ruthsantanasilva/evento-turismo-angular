@@ -124,9 +124,20 @@ table tr td {
   color: #000;
   margin-left: 12px;
 }
-.fa-plane-arrival, .fa-bed, .fa-landmark {
+.fas-logout{
+  float: right;
+  background-color: transparent;
+  border: none;
+  padding: none;
+  margin-right: 20px;
+}
+.fa-logout{
+  width: 20px;
+  height: 20px;
+}
+.fa-plane-arrival, .fa-bed, .fa-landmark, .fa-logout{
   float: center;
-  margin-top: 15px;
+  margin-top: 10px;
   border-radius: 0.313rem;
   background-color: #fa7b04;
   border-radius: 10px;
@@ -138,7 +149,7 @@ table tr td {
   cursor: pointer;
   border: none;
 }
-.fa-plane-arrival:hover, .fa-bed:hover, .fa-landmark:hover {
+.fa-plane-arrival:hover, .fa-bed:hover, .fa-landmark:hover, .fa-logout:hover {
   background-color: #881df2;
   transition: all 0.1s ease-in-out 0s;
 }
@@ -601,181 +612,5 @@ h2 {
   background: linear-gradient(90deg, #881df2, 0%, #881df2 100%);
   box-shadow: 5px 5px 8px #881df260;
   transform: translateY(-6px);
-} /*---LUGARES MAIS REQUISITADOS----*/
-.slider,
-.slider2,
-.maisrequisitados {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
 }
-.maisrequisitados:hover{
-    transform: translateY(10px);
-    transition: all 0.3s ease-in-out 0s;
-    box-shadow: 5px 5px 8px #fa7b048e;
-    border-radius: 60%;
-}
-li.slide {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 200px;
-  width: 200px;
-}
-
-li.slide2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 50px;
-  width: 200px;
-  margin-top: 10px;
-} /*LEGENDA DOS LUGARES MAIS REQUISITADOS*/
-.slide2 p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 0.9em;
-  margin-left: 5px;
-  margin-right: 5px;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-}
-.slide img {
-  margin-left: 5px;
-  margin-right: 5px;
-  box-shadow: 1px 1px 5px #242425;
-  border-radius: 60%;
-  height: 100%;
-  width: 100%;
-} /*COMENTÁRIOS DOS VIAJANTES*/
-#tituloopinioes {
-  font-family: "beach";
-  margin-top: 40px;
-  text-align: center;
-  font-size: 1.8em;
-  padding: 10px;
-}
-.box-front3 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.perfil {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-.estrelas {
-  width: 80px;
-  height: 40px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.tituloavaliacao {
-  font-size: 1em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-#subtituloop {
-  margin-top: 10px;
-  font-weight: bold;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 0.8em;
-}
-.txtavaliacao {
-  margin-top: 20px;
-  font-size: 0.6em;
-  color: #242425b9;
-} /*-- FORMULÁRIO DE EMAIL--*/
-.containerformemail {
-  margin-top: 10px;
-  height: 200px;
-  width: 100%;
-  text-align: center;
-}
-.formemail {
-  padding: 10px;
-  display: inline-block;
-  margin-left: 5px;
-  margin-top: 10px;
-  color: #0d0d0d;
-  background-color: #fff;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-  box-shadow: 1px 1px 3px #24242585;
-}
-#textemail {
-  float: left;
-  font-size: 0.8em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  width: 200px;
-  padding: 10px;
-  border-color: #0d0d0d;
-  margin-left: 25px;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-#recebaofertas {
-  float: left;
-  margin-left: 10px;
-  margin-top: 20px;
-  font-size: 0.8em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  width: 250px;
-  padding: 10px;
-}
-#emailimgcontato {
-  float: left;
-  width: 60px;
-  height: 60px;
-  margin-left: 30px;
-  margin-top: 20px;
-}
-.botaoformemail {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1em;
-  background-color: #fa7b04;
-  font-weight: bold;
-  padding: 8px;
-  width: 100px;
-  border-radius: 10px;
-  margin-top: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
-  border-color: transparent;
-  cursor: pointer;
-}
-.botaoformemail:hover {
-  background-color: #881df2;
-  color: #fff;
-  transition: all 0.5s ease-in;
-} /*IMAGEM DE FUNDO ANTES DO RODAPÉ*/
-.fundo {
-  background: black var(--img-grecia1) center center no-repeat
-    fixed;
-  background-size: cover;
-  height: 500px;
-  margin-top: 90px;
-} /*RODAPÉ*/
-.rodape {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
-  margin-top: 10px;
-}
-.linkrodape {
-  text-decoration: none;
-  color: #000;
-}
-.linkrodape:hover {
-  text-decoration: underline;
-}
-footer .cred {
-  margin-top: 35px;
-  font-size: 0.6em;
-}
-/**/
 

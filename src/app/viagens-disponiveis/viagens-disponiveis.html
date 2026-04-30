@@ -1,0 +1,335 @@
+<body>
+    <router-outlet></router-outlet>
+
+    <div class="menu1">
+        <button class="fas-logout" mat-icon-button type="button" aria-label="Sair" (click)="logout()">
+            <mat-icon class="fas fa-logout">logout</mat-icon>
+        </button>
+        <a routerLink="/login" matTooltip="Login">
+            <i class="fas fa-user"></i></a>
+        <a routerLink="/" target="_self"><img ngSrc="assets/imagens/logo1.png" width="1000" height="1000"
+                class="logopag" priority /></a>
+    </div>
+
+    <div class="container-form-viagem">
+        <form class="formviagem">
+            <p>
+                <input list="origem" name="origem" class="origem" placeholder="Origem" />
+                <datalist id="origem">
+                    <option value="São Paulo"></option>
+                    <option value="Bonito - MS"></option>
+                    <option value="Brasília - DF"></option>
+                    <option value="Porto Seguro - BA"></option>
+                    <option value="Nova Iorque - EUA"></option>
+                    <option value="Roma - Itália"></option>
+                </datalist>
+            </p>
+            <p>
+                <input list="destino" name="destino" class="destino" placeholder="Destino" />
+                <datalist id="destino">
+                    <option value="São Paulo"></option>
+                    <option value="Bonito - MS"></option>
+                    <option value="Brasília - DF"></option>
+                    <option value="Porto Seguro - BA"></option>
+                    <option value="Nova Iorque - EUA"></option>
+                    <option value="Roma - Itália"></option>
+                </datalist>
+            </p>
+            <p>
+                <input type="text" name="data" id="data" class="data" placeholder="Ida" onfocus="(this.type='date')"
+                    onblur="(this.type='text')" />
+            </p>
+            <p>
+                <input type="text" name="data" id="data" class="data" placeholder="Volta" onfocus="(this.type='date')"
+                    onblur="(this.type='text')" />
+            </p>
+
+            <p>
+                <button type="button" id="botao" class="botaoform" (click)="buscarViagens()">
+                    Buscar
+                </button>
+            </p>
+
+        </form>
+    </div>
+
+    <app-left-sidebar [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
+        (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)">
+    </app-left-sidebar>
+
+
+    <header>
+        <h1>Confira nossos pacotes promocionais</h1>
+        <div id="linha-horizontal"></div>
+    </header>
+  
+  <!-- Informações do voo -->
+ <div class="lista-voos"><div *ngFor="let voo of voos">
+
+    <div class="voo-info">
+      <div class="trecho">
+        <span class="hora">{{ voo.ida.hora }}</span>
+        <span class="rota">{{ voo.ida.rota }}</span>
+        <span class="tipo">direto</span>
+        <span class="duracao">{{ voo.ida.duracao }}</span>
+      </div>
+
+      <div class="trecho">
+        <span class="hora">{{ voo.volta.hora }}</span>
+        <span class="rota">{{ voo.volta.rota }}</span>
+        <span class="tipo">direto</span>
+        <span class="duracao">{{ voo.volta.duracao }}</span>
+      </div>
+
+      <div class="companhia">
+        {{ voo.companhia }}
+      </div>
+    </div>
+
+    <div class="voo-preco">
+      <div class="valor">R$ {{ voo.preco }}</div>
+      <div class="tipo-tarifa">{{ voo.tarifa }}</div>
+      <button class="btn-oferta">Ver oferta</button>
+    </div>
+
+  </div>
+</div>
+
+
+    <h1 id="tituloopinioes">Lugares mais requisitados</h1>
+    <div id="linha-horizontal"></div>
+
+    <ul class="slider">
+        <li class="slide">
+            <a routerLink="/login" class="maisrequisitados">
+                <img ngSrc="assets/imagens/local/bonito.jpg" width="2000" height="2000" />
+            </a>
+        </li>
+        <li class="slide">
+            <a routerLink="/login" class="maisrequisitados">
+                <img ngSrc="assets/imagens/local/japao.jpg" width="2000" height="2000" />
+            </a>
+        </li>
+        <li class="slide">
+            <a routerLink="/login" class="maisrequisitados">
+                <img ngSrc="assets/imagens/local/roma.jpg" width="2000" height="2000" />
+            </a>
+        </li>
+        <li class="slide">
+            <a routerLink="/login" class="maisrequisitados">
+                <img ngSrc="assets/imagens/local/california.png" width="2000" height="2000" />
+            </a>
+        </li>
+    </ul>
+    <ul class="slider2">
+        <li class="slide2">
+            <p>Bonito - MG</p>
+        </li>
+        <li class="slide2">
+            <p>Japão</p>
+        </li>
+        <li class="slide2">
+            <p>Roma - Itália</p>
+        </li>
+        <li class="slide2">
+            <p>Califórnia - EUA</p>
+        </li>
+    </ul>
+
+    <h1 id="tituloopinioes">
+        A opinião dos nossos viajantes é sempre muito bem vinda
+    </h1>
+    <div id="linha-horizontal"></div>
+
+    <section class="corpo3">
+        <div class="flip-container9">
+            <div class="flipper9">
+                <div class="front3">
+                    <div class="box box-front3">
+                        <h3 class="tituloavaliacao">
+                            <img ngSrc="assets/imagens/icone/profile.png" width="2000" height="2000" alt="perfil"
+                                class="perfil" />Fulana
+                        </h3>
+                        <p>
+                            <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                                class="estrelas" />
+                        </p>
+                        <p id="subtituloop">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+
+                        <p class="txtavaliacao">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
+                            porro animi architecto commodi tenetur consectetur possimus quia
+                            nesciunt laborum voluptatum exercitationem illo repellat nostrum
+                            aspernatur unde beatae accusantium asperiores voluptate..
+                        </p>
+
+                        <a href="index.html" target="_self">
+                            <p class="txtavaliacao">Avaliação de: São Paulo</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container10">
+            <div class="flipper10">
+                <div class="front3">
+                    <div class="box box-front3">
+                        <h3 class="tituloavaliacao">
+                            <img ngSrc="assets/imagens/icone/profile.png" width="2000" height="2000" alt="perfil"
+                                class="perfil" />Fulano
+                        </h3>
+                        <p>
+                            <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                                class="estrelas" />
+                        </p>
+                        <p id="subtituloop">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+
+                        <p class="txtavaliacao">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
+                            porro animi architecto commodi tenetur consectetur possimus quia
+                            nesciunt laborum voluptatum exercitationem illo repellat nostrum
+                            aspernatur unde beatae accusantium asperiores voluptate..
+                        </p>
+
+                        <a href="index.html" target="_self">
+                            <p class="txtavaliacao">Avaliação de: Japão</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container11">
+            <div class="flipper11">
+                <div class="front3">
+                    <div class="box box-front3">
+                        <h3 class="tituloavaliacao">
+                            <img ngSrc="assets/imagens/icone/profile.png" width="2000" height="2000" alt="perfil"
+                                class="perfil" />Fulano
+                        </h3>
+                        <p>
+                            <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                                class="estrelas" />
+                        </p>
+                        <p id="subtituloop">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+
+                        <p class="txtavaliacao">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
+                            porro animi architecto commodi tenetur consectetur possimus quia
+                            nesciunt laborum voluptatum exercitationem illo repellat nostrum
+                            aspernatur unde beatae accusantium asperiores voluptate..
+                        </p>
+
+                        <a href="index.html" target="_self">
+                            <p class="txtavaliacao">Avaliação de: Roma</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container12">
+            <div class="flipper12">
+                <div class="front3">
+                    <div class="box box-front3">
+                        <h3 class="tituloavaliacao">
+                            <img ngSrc="assets/imagens/icone/profile.png" width="2000" height="2000" alt="perfil"
+                                class="perfil" />Fulana
+                        </h3>
+                        <p>
+                            <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                                class="estrelas" />
+                        </p>
+                        <p id="subtituloop">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+
+                        <p class="txtavaliacao">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
+                            porro animi architecto commodi tenetur consectetur possimus quia
+                            nesciunt laborum voluptatum exercitationem illo repellat nostrum
+                            aspernatur unde beatae accusantium asperiores voluptate..
+                        </p>
+
+                        <a href="index.html" target="_self">
+                            <p class="txtavaliacao">Avaliação de: Rio de Janeiro</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="containerformemail">
+        <form class="formemail">
+            <p id="emailcontato">
+                <img ngSrc="assets/imagens/contatoemail.png" width="2000" height="2000" alt="imagem de email"
+                    id="emailimgcontato" />
+            </p>
+            <p id="recebaofertas">
+                Receba ofertas exclusivas do TravelGo no seu e-mail
+            </p>
+            <p>
+                <input type="text" id="textemail" placeholder="email@email.com" />
+            </p>
+
+            <a href="index.html" target="_self">
+                <p>
+                    <input type="button" value="Enviar" id="botao" class="botaoformemail" />
+                </p>
+            </a>
+        </form>
+    </nav>
+
+    <table>
+        <tr class="menu">
+            <td id="emailp">
+                <img ngSrc="assets/imagens/icone/email.png" width="2000" height="2000" alt="user" id="user" />
+                txxxxxxx@travelgo.com.br
+            </td>
+            <td id="central">
+                <img ngSrc="assets/imagens/icone/online.png" width="2000" height="2000" alt="user" id="user" />
+                Atendimento: (xx) xxxx-xxxx
+            </td>
+            <td id="rede2">
+                <a routerLink="/">
+                    <img ngSrc="assets/imagens/icone/whatsapp.png" width="2000" height="2000" alt="user" id="user" />
+                </a>
+            </td>
+            <td id="rede3">
+                <a routerLink="/">
+                    <img ngSrc="assets/imagens/icone/twitter.png" width="2000" height="2000" alt="user" id="user" />
+                </a>
+            </td>
+            <td id="rede4">
+                <a routerLink="/">
+                    <img ngSrc="assets/imagens/icone/instagram.png" width="2000" height="2000" alt="user" id="user" />
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="fundo">.</div>
+
+    <footer class="rodape">
+        <p>
+            &copy Ruth Santana |
+            <a href="https://www.linkedin.com/in/ruthsantana" target="_blank" class="linkrodape">LinkedIn</a>
+        </p>
+
+        <p class="cred">
+            Crédito de imagens:
+            <a href="https://br.freepik.com/vetores-gratis/logotipo-detalhado-da-viagem_9544552.htm#query=viagem%20logo&position=5&from_view=search&track=ais"
+                class="linkrodape">Freepik</a>
+            |
+            <a href="https://pixabay.com/pt/vectors/avalia%C3%A7%C3%A3o-reveja-6930474/" class="linkrodape">Pixabay</a>
+        </p>
+    </footer>
+</body>

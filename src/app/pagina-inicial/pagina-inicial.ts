@@ -1,23 +1,78 @@
-import { Component, HostListener, OnInit, signal } from '@angular/core';
-import { NgOptimizedImage } from "@angular/common";
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Component, signal } from '@angular/core';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LeftSidebarComponent } from '../menu-esquerda/menu-esquerda';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [LeftSidebarComponent, 
-    NgOptimizedImage, RouterLink, RouterOutlet, MatSidenavModule],
+  imports: [
+    LeftSidebarComponent,
+    NgOptimizedImage,
+    RouterLink,
+    RouterOutlet,
+    MatSidenavModule,
+    MatSnackBarModule, 
+    MatIconModule, 
+    MatTooltipModule, 
+    CommonModule,
+  ],
   templateUrl: './pagina-inicial.html',
-  styleUrls: ['./pagina-inicial.scss',
-    './media-queries.scss'],
+  styleUrls: ['./pagina-inicial.scss', './media-queries.scss'],
 })
 export class PaginaInicial {
+
   isLeftSidebarCollapsed = signal<boolean>(true);
 
-changeIsLeftSidebarCollapsed(value: boolean): void {
+  constructor(
+    private router: Router,
+    private snackBar: MatSnackBar
+  ) {}
+
+  changeIsLeftSidebarCollapsed(value: boolean): void {
     this.isLeftSidebarCollapsed.set(value);
   }
 
+  buscarViagens(): void {
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+
+    if (usuarioLogado) {
+      // ✅ Usuário está logado
+      this.router.navigate(['/viagens']);
+    } else {
+      // ❌ Não está logado
+      this.snackBar.open(
+        'Faça login para buscar viagens disponíveis',
+        'Fechar',
+        {
+          duration: 3000,
+          verticalPosition: 'top',
+          panelClass: ['snackbar-erro'],
+        }
+      );
+
+      this.router.navigate(['/login']);
+    }
+  }
+
+  logout(): void {
+  localStorage.removeItem('usuarioLogado');
+
+  this.snackBar.open(
+    'Você saiu da sua conta com sucesso',
+    'Fechar',
+    {
+      duration: 3000,
+      verticalPosition: 'top',
+      panelClass: ['snackbar-sucesso'],
+    }
+  );
+
+  this.router.navigate(['/']);
+}
 }

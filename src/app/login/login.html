@@ -4,9 +4,11 @@
 
     <section class="corpo">
       <div class="selecao">
-        <input type="radio" id="login" class="rd" name="consulta" value="login" [(ngModel)]="modo" />
+        <input type="radio" id="login" class="rd" name="consulta" value="login" [checked]="modo === 'login'"
+          (change)="modo = 'login'" />
         <label for="login" class="slogin1">Login</label>
-        <input type="radio" id="cadastro" class="rd" name="consulta" value="cadastro" [(ngModel)]="modo" />
+        <input type="radio" id="cadastro" class="rd" name="consulta" value="cadastro" [checked]="modo === 'cadastro'"
+          (change)="modo = 'cadastro'" />
         <label for="cadastro" class="slogin2">Cadastro</label>
       </div>
 
@@ -17,27 +19,30 @@
 
           <div id="ediv1" class="onOff frontlc" *ngIf="modo === 'login'">
             <div id="box1" class="boxlc box-frontlc">
-              <form action="." method="post" name="dados" onsubmit="return false;">
+              <form method="post" name="dados" [formGroup]="form" (ngSubmit)="onSubmit()">
                 <legend class="titulologin">Login</legend>
 
-                <mat-form-field class="label" >
-                <mat-label for="email" class="email">
-                  E-mail: </mat-label>
-                  <input class="input-padrao" type="email" name="email" matInput placeholder="name@email.com" required />
+                <mat-form-field class="label">
+                  <mat-label for="email" class="email">
+                    E-mail: </mat-label>
+                  <input class="input-padrao" type="email" id="email" formControlName="email" name="email" matInput
+                    placeholder="name@email.com" required />
                 </mat-form-field>
 
-                <mat-form-field class="label" >
-                  <mat-label for="senha" class="senha">
-                    Senha: </mat-label>
-                    <input class="input-padrao" type="password" name="senha" required matInput
-                      [type]="hide() ? 'password' : 'text'" />
+                <mat-form-field class="label">
+                  <mat-label for="password" class="password">
+                    Senha: 
+                  </mat-label>
+                  <input matInput class="input-padrao" type="password" id="password" name="password"
+                    formControlName="password" [type]="hide() ? 'password' : 'text'" />
 
-                    <button mat-icon-button matSuffix type="button" (click)="clickEvent($event)"
-                      [attr.aria-label]="'Mostrar senha'">
-                      <mat-icon>
-                        {{ hide() ? 'visibility_off' : 'visibility' }}
-                      </mat-icon>
-                    </button>
+                  <button mat-icon-button matSuffix type="submit" (click)="clickEvent($event)"
+                    [attr.aria-label]="'Mostrar senha'">
+                    <mat-icon>
+                      {{ hide() ? 'visibility_off' : 'visibility' }}
+                      {{isLoginMode ? 'Entrar' : 'Cadastrar'}}
+                    </mat-icon>
+                  </button>
                 </mat-form-field>
 
                 <div class="pbotao">
@@ -51,55 +56,46 @@
             </div>
           </div>
 
+          <!-- CADASTRO -->
+
           <div class="onOff backlc" *ngIf="modo === 'cadastro'">
             <div class="boxlc2 box-backlc">
-              <form action="." method="post" name="dados" onsubmit="return false;">
+              <form method="post" name="dados" [formGroup]="form" (ngSubmit)="onSubmit()">
                 <legend class="titulologin">Cadastro</legend>
+
+                <mat-form-field class="label" >
+                  <mat-label for="name" class="nome">
+                    Nome: </mat-label>
+                  <input class="input-padrao" type="text" name="name" id="name" formControlName="name"
+                  matInput placeholder="José da Silva" required />
+                </mat-form-field>
+
+                <mat-form-field class="label" >
+                  <mat-label for="email" class="email">
+                    E-mail: </mat-label>
+                  <input class="input-padrao" type="email" id="email" formControlName="email" name="email" matInput
+                    placeholder="name@email.com" required />
+                </mat-form-field>
                 
-                <mat-form-field class="label" >
-                <mat-label for="nome" class="nome">
-                  Nome: </mat-label>
-                  <input class="input-padrao" type="text" name="nome" required matInput placeholder="José da Silva" required/>
-                </mat-form-field>
+                <mat-form-field class="label">
+                  <mat-label for="password" class="password">
+                    Senha: 
+                  </mat-label>
+                  <input matInput class="input-padrao" type="password" id="password" name="password"
+                    formControlName="password" [type]="hide() ? 'password' : 'text'" />
 
-                 <mat-form-field class="label" >
-                <mat-label for="email" class="email">
-                  E-mail: </mat-label>
-                  <input class="input-padrao" type="email" name="email" matInput placeholder="name@email.com" required />
-                </mat-form-field>
-
-                <mat-form-field class="label" >
-                  <mat-label for="senha" class="senha">
-                    Senha: </mat-label>
-                    <input class="input-padrao" type="password" name="senha" required matInput
-                      [type]="hide() ? 'password' : 'text'" />
-
-                    <button mat-icon-button matSuffix type="button" (click)="clickEvent($event)"
-                      [attr.aria-label]="'Mostrar senha'">
-                      <mat-icon>
-                        {{ hide() ? 'visibility_off' : 'visibility' }}
-                      </mat-icon>
-                    </button>
-                </mat-form-field>
-
-                 <mat-form-field class="label" >
-                  <mat-label for="senha" class="senha">
-                    Repita a senha: </mat-label>
-                    <input class="input-padrao" type="password" name="senha" required matInput
-                      [type]="hide() ? 'password' : 'text'" />
-
-                    <button mat-icon-button matSuffix type="button" (click)="clickEvent($event)"
-                      [attr.aria-label]="'Mostrar senha'">
-                      <mat-icon>
-                        {{ hide() ? 'visibility_off' : 'visibility' }}
-                      </mat-icon>
-                    </button>
+                  <button mat-icon-button matSuffix type="submit" (click)="clickEvent($event)"
+                    [attr.aria-label]="'Mostrar senha'">
+                    <mat-icon>
+                      {{ hide() ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
+                  </button>
                 </mat-form-field>
 
                 <div class="pbotao">
-                  <input type="submit" value="Cadastrar" class="botaolc" name="acao" />
-                </div>
-                
+                  <button type="submit" value="Cadastrar" class="botaolc" name="acao" >
+                  {{isLoginMode ? 'Entrar' : 'Cadastrar'}} </button>
+                  </div>
               </form>
             </div>
           </div>
